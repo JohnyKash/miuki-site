@@ -4,9 +4,166 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Миюки - самая милая кошка</title>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Handjet', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #9D71F4; /* Фон сайта */
+            color: #F8DAAF; /* Цвет текста */
+        }
+        header {
+            text-align: center;
+            background-image: url('images/head.jpg');
+            background-size: cover;
+            background-position: center 73%;
+            height: 300px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        section {
+            padding: 20px;
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.1); /* Легкий прозрачный фон для секций */
+            border-radius: 10px;
+        }
+        section h2 {
+            color: #F8DAAF;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: rgba(255, 255, 255, 0.2); /* Прозрачный фон для списка */
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .button {
+            display: inline-block;
+            background: #F8DAAF; /* Цвет кнопки */
+            color: #9D71F4; /* Текст на кнопке */
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .button:hover {
+            background: #9D71F4; /* Инверсия цвета на кнопке при наведении */
+            color: #F8DAAF;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #F8DAAF; /* Фон футера */
+            color: #9D71F4; /* Текст футера */
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Адаптивные стили для экранов шириной менее 768px (например, iPhone) */
+        @media (max-width: 768px) {
+            header {
+                height: 250px; /* Уменьшаем высоту шапки для мобильных устройств */
+            }
+            header h1 {
+                font-size: 1.8em; /* Меньший размер заголовка на мобильных устройствах */
+            }
+            section {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+            .gallery {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Уменьшаем количество колонок в галерее */
+            }
+            .button {
+                padding: 8px 15px; /* Уменьшаем размер кнопки */
+            }
+        }
+
+        /* Еще более адаптивные стили для экранов шириной менее 480px (мобильные устройства) */
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em; /* Еще меньший размер шрифта для маленьких экранов */
+            }
+            section h2 {
+                font-size: 1.2em; /* Меньший размер заголовков */
+            }
+            .gallery img {
+                border-radius: 3px; /* Меньший радиус скругления для картинок */
+            }
+            .button {
+                padding: 6px 12px; /* Уменьшаем размер кнопки еще больше */
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Привет, я Миюки!</h1>
-    <p>Добро пожаловать на мой сайт!</p>
+    <header>
+        <h1>Привет, я Миюки!</h1>
+    </header>
+    <section>
+        <h2>Обо мне</h2>
+        <p>Привет! Меня зовут Миюки, но родители так же зовут меня "Миюши, Миюка и ты заебала". Я молодая кошка в семье самых лучших родителей.</p>
+    </section>
+    <section>
+        <h2>Мои любимые игрушки</h2>
+        <ul>
+            <li>Когтеточка</li>
+            <li>Мышки с кошачьей мятой</li>
+            <li>Ноги спящих родителей</li>
+            <li>Большая плюшевая рыбка с кошачьей мятой</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Любимый корм</h2>
+        <p>Премиум Холистик</p>
+    </section>
+    <section>
+        <h2>Моя галерея</h2>
+        <div class="gallery">
+            <img src="images/1.jpg" alt="Фото Миюки 1">
+            <img src="images/2.jpg" alt="Фото Миюки 2">
+            <img src="images/3.jpg" alt="Фото Миюки 3">
+            <img src="images/4.jpg" alt="Фото Миюки 4">
+        </div>
+    </section>
+    <section style="text-align: center;">
+        <a href="#" class="button">Узнать больше</a>
+    </section>
+    <footer>
+        © 2025 Миюки. Все права защищены.
+    </footer>
 </body>
 </html>
